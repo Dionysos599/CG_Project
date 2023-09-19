@@ -2,7 +2,7 @@
 Official version: https://github.com/nanli9/CGProject.github.io
 
 ## Result
-https://nanli9.github.io/CGProject.github.io
+https://dionysos599.github.io/CGProject.github.io
 
-## Project display
-Open index.html with live server plug-in.
+### Local presentation
+Open index.html with live server plug-in with IDE.
