@@ -1,14 +1,14 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { STLLoader } from 'three/addons/loaders/STLLoader.js';
-import {OBJLoader} from 'three/addons/loaders/OBJLoader.js';
-import {MTLLoader} from 'three/addons/loaders/MTLLoader.js';
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+import { MTLLoader } from 'three/addons/loaders/MTLLoader.js';
 
 var bead,maincube,tassels,woodframe,topcube,ring,handler;
-let i =2;
-let lightMoveSpeed=0.0;
-let lanternrotateSpeed=0.0;
-let rotateCheck=false;
+let i = 2;
+let lightMoveSpeed = 0.0;
+let lanternrotateSpeed = 0.0;
+let rotateCheck = false;
 let lightMove = false;
 
 const planeSize = 20;
@@ -93,9 +93,11 @@ markLight();
 function markLight(){
     scene.add( lightPoint );
 }
+
 function updateLight(i){
     lightPoint.position.set(i, 5, 0)
 }
+
 addInnerLightSource();
 function addInnerLightSource(){
     const color = 0xFFFFFF;
@@ -160,6 +162,7 @@ function loadLantern(){
             console.log(error)
         }
     )
+
     STLloader.load(
         'assets/lantern/woodframe.stl',
         function (geometry) {
@@ -179,6 +182,7 @@ function loadLantern(){
             console.log(error)
         }
     )
+
     STLloader.load(
         'assets/lantern/topcube.stl',
         function (geometry) {
@@ -198,6 +202,7 @@ function loadLantern(){
             console.log(error)
         }
     )
+
     STLloader.load(
         'assets/lantern/ring.stl',
         function (geometry) {
@@ -222,6 +227,7 @@ function loadLantern(){
             console.log(error)
         }
     )
+
     STLloader.load(
         'assets/lantern/handler.stl',
         function (geometry) {
@@ -255,24 +261,23 @@ mtlLoader.load('assets/Lantern_OBJ.mtl', (mtl) => {
   objLoader.load('assets/Lantern_OBJ.obj', (root) => {
     root.scale.set(0.05,0.05,0.05);
     root.traverse(i=>{
-        if(i.type==="Mesh")
+        if (i.type==="Mesh")
             i.castShadow = true;
     })
     //scene.add(root);
   });
 });
 
-
 rotateButton();
 lightMoveButton();
 
 //animate
 function animate() {
-	requestAnimationFrame( animate );
+	requestAnimationFrame(animate);
     i+=lightMoveSpeed;
     light.position.set(i, 5, 0);
     updateLight(i);
-    if(bead&&maincube&&tassels&&topcube&&woodframe&&ring&&handler){
+    if (bead&&maincube&&tassels&&topcube&&woodframe&&ring&&handler) {
         bead.rotation.z+=lanternrotateSpeed;
         maincube.rotation.z+=lanternrotateSpeed;
         tassels.rotation.z+=lanternrotateSpeed;
@@ -290,28 +295,25 @@ animate();
 function rotateButton(){
     const button = document.getElementById("rotate");
     button.addEventListener("click",()=>{
-        rotateCheck=!rotateCheck;
         console.log("rotate");
-        if(rotateCheck){
+        rotateCheck=!rotateCheck;
+        if (rotateCheck) {
             lanternrotateSpeed=0.02;
-        }
-        else{
+        } else {
             lanternrotateSpeed=0.0;
         }
-
     })
 }
+
 function lightMoveButton(){
     const button = document.getElementById("lightMove");
     button.addEventListener("click",()=>{
         console.log("lightMove");
         lightMove=!lightMove;
-        if(lightMove){
+        if (lightMove) {
             lightMoveSpeed=0.05;
-        }
-        else{
+        } else {
             lightMoveSpeed=0.0;
         }
-
     })
 }
