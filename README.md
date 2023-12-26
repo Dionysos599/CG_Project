@@ -8,7 +8,7 @@ Official version: https://github.com/nanli9/CGProject.github.io
 <p>Harper Li</p>
 
 ## Result
-https://dionysos599.github.io/CGProject.github.io
+https://dionysos599.github.io/CG_Project.github.io
 
 ### Local presentation
 Open index.html with live server plug-in with IDE.
