@@ -9,4 +9,4 @@ Original version: https://github.com/nanli9/CGProject.github.io
 
 ## Result
 https://dionysos599.github.io/CG_Project.github.io  
-Note: It is possible that the 'rotate' and 'lightMove' buttons may not work on Github, but local operations are not affected.
+Note: It is possible that the 'rotate' and 'lightMove' buttons may not work on the deployment of Github, but local operations are not affected.
