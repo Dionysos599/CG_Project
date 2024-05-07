@@ -2,10 +2,10 @@
 Original version: https://github.com/nanli9/CGProject.github.io
 
 ## Contributors
-<p>Nan Li</p>
-<p>Dennis Lam</p>
-<p>Ji Min</p>
-<p>Harper Li</p>
+<li>Nan Li</li>
+<li>Dennis Lam</li>
+<li>Ji Min</li>
+<li>Harper Li</li>
 
 ## Result
 https://dionysos599.github.io/CG_Project.github.io  
