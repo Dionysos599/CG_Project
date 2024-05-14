@@ -8,5 +8,5 @@ Original version: https://github.com/nanli9/CGProject.github.io
 <li>Harper Li</li>
 
 ## Result
-https://dionysos599.github.io/CG_Project.github.io  
-Note: It is possible that the 'rotate' and 'lightMove' buttons may not work on the deployment of Github, but local operations are not affected.
+https://dionysos599.github.io/CG_Project
+Note: It is possible that the 'rotate' or 'lightMove' buttons may not work on the deployment of Github, but local operations are not affected.
